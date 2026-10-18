@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Quicksand", sans-serif;
+  --font-handwritten: "Caveat", cursive;
+  
+  --color-brand-yellow: #70bbf2;
+  --color-brand-yellow-light: #eaf5fc;
+  --color-brand-orange: #e57c58;
+  --color-brand-orange-light: #fdf2ee;
+  --color-brand-blue: #7ba6cb;
+  --color-brand-blue-light: #f2f7fb;
+  --color-brand-cream: #faf6f0;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-cream);
+    color: #333333;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom continuous float animation for bees/bubbles */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-delayed {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float-delayed 8s ease-in-out infinite;
+}
+
+/* Confetti styling for confirmation success */
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #70bbf2;
+  top: -10px;
+  opacity: 0.8;
+  animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+  0% { top: -10px; transform: translateX(0) rotate(0deg); }
+  100% { top: 100%; transform: translateX(100px) rotate(360deg); }
+}
+

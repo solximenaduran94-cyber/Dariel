@@ -1,0 +1,6 @@
+{
+  "name": "Invitacion Web Dariel",
+  "description": "Invitación web interactiva y animada para el primer añito de Dariel Pohl Lozano, con cuenta regresiva, fotos, mapa, detalles de talles para obsequios y botón de confirmación de asistencia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
